@@ -46,3 +46,30 @@ Follow these steps to set up and run the application locally:
 
    npm start
 
+
+### Frontend
+
+## Prerequisites
+
+Before you begin, ensure you have the following prerequisites:
+
+- Node.js and npm installed ([Download Node.js](https://nodejs.org/))
+- Angular CLI installed globally:
+
+  ```bash
+  npm install -g @angular/cli
+
+1. **Navigate to the project directory:** 
+ 
+   cd Frontend
+
+2. **Install Dependencies**
+
+   npm install
+
+3. **Serve the application:**
+
+   ng serve
+
+
+
