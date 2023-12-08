@@ -27,7 +27,7 @@ export class ForgotPasswordComponent implements OnInit {
       console.error('Error sending reset password link:', error);
       alert(error.error.message)
       this.route.navigateByUrl("/register");
-      // Optionally, you can display an error message to the user
+  
     })
   }
 

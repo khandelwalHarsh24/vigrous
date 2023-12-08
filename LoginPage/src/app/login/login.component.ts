@@ -25,7 +25,7 @@ export class LoginComponent implements OnInit {
       // Handle error
       alert(error.error.message)
       // console.error('Password or Email is Incorrect', error);
-      // Optionally, you can display an error message to the user
+  
     })
   }
 
