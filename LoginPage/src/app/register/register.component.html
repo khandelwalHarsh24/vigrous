@@ -1,0 +1,38 @@
+
+
+<form (ngSubmit)="onSubmit()" #registerForm="ngForm">
+    <h2>Register</h2>
+    <div class="form-group" >
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" [(ngModel)]="username" required="">
+      <div *ngIf="registerForm.controls['username'].touched && registerForm.controls['username'].hasError('required')" class="error-message">
+        Username is required.
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" [(ngModel)]="email" required email>
+      <div *ngIf="registerForm.controls['email'].touched && registerForm.controls['email'].hasError('required')" class="error-message">
+        Email is required.
+      </div>
+      <div *ngIf="registerForm.controls['email'].touched && registerForm.controls['email'].hasError('email')" class="error-message">
+        Enter a valid email address.
+      </div>
+    </div>
+  
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"  [(ngModel)]="password" required minlength="8">
+      <div *ngIf="registerForm.controls['password'].touched && registerForm.controls['password'].hasError('required')" class="error-message">
+        Password is required.
+      </div>
+      <div *ngIf="registerForm.controls['password'].touched && registerForm.controls['password'].hasError('minlength')" class="error-message">
+        Password must be at least 8 characters long.
+      </div>
+    </div>
+  
+    <button type="submit">Register</button>
+    <p>Already have an account? <a routerLink="/login">Login here</a></p>
+</form>
+  
